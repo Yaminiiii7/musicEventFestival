@@ -1,14 +1,3 @@
-/*** Dark Mode ***
-  
-  Purpose:
-  - Use this starter code to add a dark mode feature to your website.
-
-  When To Modify:
-  - [ ] Project 5 (REQUIRED FEATURE) 
-  - [ ] Any time after
-***/
-
-
 
 let themeButton=document.getElementById('theme-button')
 
@@ -33,22 +22,6 @@ navLinks.forEach(link => {
   });
 });
 
-
-/*** Form Handling ***
-  
-  Purpose:
-  - When the user submits the RSVP form, the name and state they 
-    entered should be added to the list of participants.
-
-  When To Modify:
-  - [ ] Project 6 (REQUIRED FEATURE)
-  - [ ] Project 6 (STRETCH FEATURE) 
-  - [ ] Project 7 (REQUIRED FEATURE)
-  - [ ] Project 9 (REQUIRED FEATURE)
-  - [ ] Any time between / after
-***/
-
-// Step 1: Add your query for the submit RSVP button here
 let form=document.getElementById("rsvp-form")
 let count=3;
 const addParticipant = (event) => {
@@ -109,12 +82,9 @@ const validateForm = () => {
     for(let i=0;i<rsvpInputs.length-1;i++){
     rsvpInputs[i].value=' ';   
   }
-  }
+  
+}
 }
 }
 
 form=addEventListener('submit',validateForm);
-
-
-/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
-/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
