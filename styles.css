@@ -1,32 +1,18 @@
 
 html{
-                background-color: paleturquoise;
-                color: darkmagenta
+    background-color: paleturquoise;
+    color: darkmagenta
 }
 
 body {
-    /* Add a background color or image */
-    background-color: var(--bg-color); /* see bottom of file for color variables */
+    background-color: var(--bg-color);
     text-align: center;
-    /* Customize the default size, color, and font for text*/
     font-size: 16px;
     color: var(--text-color);
-    font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
-
-    /* Put space around the edges of the webpage */
+    font-family: Tahoma, sans-serif;
     margin: 50px;
 }
 
-/*** Text ***
-  
-  Purpose: 
-  - Add style rules for headings (h1-6),
-    paragraphs (p), links (a), and buttons
-
-  When To Modify:
-  - [X] Project 3 (REQUIRED FEATURE) 
-  - [ ] Any time after
-***/
 
 h1 {
   font-family: "Impact", "Arial Black", sans-serif;
@@ -69,42 +55,41 @@ h6 {
 }
 
 p {
-  color: #333; /* Sets the text color to a dark gray */
+  color: #333; 
   font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
-  font-size: 16px; /* Sets the font size */
-  line-height: 1.6; /* Increases the spacing between lines for better readability */
-  margin-bottom: 20px; /* Adds space below the paragraph */
+  font-size: 16px; 
+  line-height: 1.6; 
+  margin-bottom: 20px; 
 }
 
 a:link {
-  color: #27cdd8; /* warm coral for unvisited links */
+  color: #27cdd8; 
   text-decoration: none;
   font-weight: bold;
 }
 
 a:visited {
-  color: #256874; /* deeper orange once visited */
+  color: #256874; 
 }
 
 a:hover {
-  color: #feb47b; /* lighter peachy glow on hover */
+  color: #feb47b; 
   text-shadow: 0 0 8px #ffb88c;
   transition: 0.3s ease;
 }
 
 a:active {
-  color: #ff4500; /* active click state - bright orange */
+  color: #ff4500; 
   text-shadow: 0 0 5px #ffb88c;
 }
 
 button {
-    /* Example Style, replace with your own! */
-    background-color: rgb(255, 47, 241);    /* button color */
-    color: white;               /* text color */
-    border: none;               /* hides the default border */
-    padding: 5px 12px;          /* space between button's text and edge */
-    border-radius: 5px;         /* curved edges instead of square */
-    cursor: pointer;            /* makes the cursor change when over button */
+    background-color: rgb(255, 47, 241);    
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;         
+    cursor: pointer;           
 }
 
 button:hover {
@@ -117,28 +102,17 @@ button:hover {
     font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
 }
 ul.none {
-  list-style-type: none;     /* removes bullets completely */
+  list-style-type: none;     
   font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
 }
 
-/*** header ***
-  
-  Purpose:
-  - Add style rules for your website's header section
-
-  When To Modify:
-  - [X] Project 3 (REQUIRED FEATURE) 
-  - [ ] Project 4 (REQUIRED FEATURE) 
-  - [ ] Any time after
-***/
-
-.header-container { /* Example A: This styles elements with class="header" */
+.header-container { 
   display: flex;
   flex-direction: row;
   padding-top: 40px;
   margin-bottom: 50px;
-  text-align: center;/* update iff required */
-  margin-top: 1px; /* update iff required */
+  text-align: center;
+  margin-top: 1px; 
   margin-bottom: 50px;
   margin-left:150px; 
 }
@@ -157,23 +131,23 @@ ul.none {
 
 .header-button {
   text-align: center;
-  background-color: #c79fcc;      /* Centers the buttons horizontally */
+  background-color: #c79fcc;      
   margin-top: 20px;
-  color: white;               /* White text */
+  color: white;               
   font-size: 16px;
   cursor: pointer;
   padding-top: 0px;
           
 }
 .header-button button {
-  background-color: #710080;  /* Green button */
-  font-weight: bold;          /* Makes text pop */
-  border: none;               /* Removes default borders */
-  border-radius: 6px;         /* Rounded corners */
-  padding: 10px 20px;         /* Space inside the button */
-  margin: 5px;                /* Space between buttons */
-  cursor: pointer;            /* Pointer cursor on hover */
-  transition: 0.3s ease;      /* Smooth hover transition */
+  background-color: #710080;  
+  font-weight: bold;
+  border: none;              
+  border-radius: 6px;        
+  padding: 10px 20px;         
+  margin: 5px;
+  cursor: pointer;            
+  transition: 0.3s ease;      
 }
 
 .header-button button:hover {
@@ -181,22 +155,13 @@ ul.none {
   color: white;
 }
 
-/*** footer ***
-  
-  Purpose:
-  - Add style rules for your website's footer section
 
-  When To Modify:
-  - [ ] Project 3 (STRETCH FEATURE) 
-  - [ ] Any time after
-***/
-
-.footer { /* Example B: This styles elements with class="footer" */
+.footer { 
     
 }
 
 .navbar ul {
-     /* Ensures the navbar is on top of other elements */
+
     list-style-type: none;
     overflow: hidden;
     position: fixed;
@@ -247,7 +212,7 @@ ul.none {
   padding-right: 10px;
 }
 
-/* Add other rsvp-related selectors here */
+
 .dark-mode {
   background-color: black;
   color: white
@@ -289,16 +254,7 @@ ul.none {
 
 }
 
-/*** Custom Colors (OPTIONAL) ***
-  
-  Purpose:
-  - Use CSS variables to define custom colors for your website
-  - To get you started, we've provided the color scheme used in our example site.
-  - To reference a color variable in your css, use var(--variable-name) in place of a color value
 
-  When To Modify:
-  - [ ] Any time (OPTIONAL)
-***/
 
 :root {
     /* Light Mode */
