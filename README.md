@@ -49,7 +49,7 @@ This project captures the essence of an immersive festival website. It highlight
 ---
 
 ## 📸 Project Preview
-![Golden Hour Sounds Screenshot](img/licensed-image.jpeg)
+![Golden Hour Sounds Screenshot](img/preview.JPG)
 
 ---
 
