@@ -1,7 +1,7 @@
 
 let themeButton=document.getElementById('theme-button')
 
-// Step 2: Write the callback function
+
 const toggleDarkMode = () => {
     document.body.classList.toggle('dark-mode');
 }
@@ -22,16 +22,14 @@ navLinks.forEach(link => {
   });
 });
 
+
 let form=document.getElementById("rsvp-form")
 let count=3;
-const addParticipant = (event) => {
-    // Step 2: Write your code to manipulate the DOM here
-    const name=document.getElementById("name").value
-    const city=document.getElementById("city").value
-
+const addParticipant = (event,person) => {
+  
     const participantList=document.querySelector('.rsvp-participants');
     const txt = document.createElement('p');
-    txt.innerText = `🎟️ ${name} from ${city} has RSVP'd`;
+    txt.innerText = `🎟️ ${person.name} from ${person.city} has RSVP'd`;
     participantList.appendChild(txt);
 
     //const showCount=document.querySelector('#rsvp');
@@ -49,11 +47,17 @@ const addParticipant = (event) => {
 }
 
 
-const validateForm = () => {
+const validateForm = (event) => {
   event.preventDefault();
   let containsErrors = false;
 
   var rsvpInputs = document.getElementById("rsvp-form").elements;
+  let person={
+  name:rsvpInputs[0].value,
+  email:rsvpInputs[1].value,
+  city:rsvpInputs[2].value
+  }
+  
   // TODO: Loop through all inputs
   for(let i=0;i<rsvpInputs.length-1;i++){
     const input=rsvpInputs[i];
@@ -78,13 +82,56 @@ const validateForm = () => {
   }
 
   if(containsErrors === false){
-    addParticipant(event);
+    //addParticipant(event);
+    addParticipant(event,person);
+    toggleModal(person)
+
     for(let i=0;i<rsvpInputs.length-1;i++){
     rsvpInputs[i].value=' ';   
   }
-  
-}
+  }
 }
 }
 
 form=addEventListener('submit',validateForm);
+
+
+
+const toggleModal = (person) => {
+    
+    const modal=document.getElementById('success-modal');
+    const modalContent=document.getElementById('modal-text');
+      
+    modal.style.display="flex";
+    modalContent.textContent=`Thank's for RSVPing, ${person.name} We can't wait to see you at the event!`;
+    let intervalId=setInterval(animateImage, 500);
+    setTimeout(() => {
+    modal.style.display='none';
+    clearInterval(intervalId);
+    }, 5000); 
+      
+}
+
+
+const modalButton=document.getElementById("Thanksbutton");
+const notDisplay=()=>{
+    const modalflex=document.querySelector(".modal");
+    modalflex.style.display='none';
+};
+modalButton.addEventListener('click',notDisplay);
+
+
+let rotateFactor=0;
+const modalImage=document.querySelector('#thanksid');
+
+const animateImage=()=>{
+
+    if(rotateFactor===-10){
+      rotateFactor=0;
+    }else{
+      rotateFactor=-10;
+    }
+    console.log(rotateFactor)
+    modalImage.style.transform=`rotate(${rotateFactor}deg)`;
+}
+

@@ -1,19 +1,28 @@
 
 html{
-    background-color: paleturquoise;
-    color: darkmagenta
+      background-color: paleturquoise;
+      color: darkmagenta
 }
 
 body {
-    background-color: var(--bg-color);
+   
     text-align: center;
     font-size: 16px;
     color: var(--text-color);
-    font-family: Tahoma, sans-serif;
+    padding: 15px;
     margin: 50px;
+    background: linear-gradient(135deg, #b392f0 0%, #d8c8ff 50%, #b07bff 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #231942;
 }
-
-
+#exp{
+  margin-left:150px;
+}
+iframe{
+  margin-left:150px;  
+}
 h1 {
   font-family: "Impact", "Arial Black", sans-serif;
   font-size: 5rem;
@@ -30,8 +39,11 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0 0 8px #f4dbe8;
+  margin-left:150px;
 }
-h3 {}
+h3 {
+  margin-left:150px;
+}
 h4 {
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 1.1rem;
@@ -39,12 +51,10 @@ h4 {
   text-transform: uppercase;
   color: #d4f7f8;
   letter-spacing: 2px;
-  /* border: 4px solid #00eaff; */
   padding-left: 8px;
   margin: 15px 0;
   text-shadow: 0 0 8px #0af487;
 }
-h5 {}
 
 h6 {
   font-family: "Verdana", sans-serif;
@@ -55,13 +65,22 @@ h6 {
 }
 
 p {
-  color: #333; 
+  color: #333;
   font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
-  font-size: 16px; 
+  font-size: 16px;
   line-height: 1.6; 
   margin-bottom: 20px; 
+  margin-left:150px;  
 }
+.pwhattoexpect{
+  padding: 15px;
+  margin: 50px;
+  width: 80%;
+  text-align: left;
+  margin-left:150px;
+  font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
 
+}
 a:link {
   color: #27cdd8; 
   text-decoration: none;
@@ -83,13 +102,18 @@ a:active {
   text-shadow: 0 0 5px #ffb88c;
 }
 
+#links{
+  margin-left:150px;
+}
+
 button {
-    background-color: rgb(255, 47, 241);    
-    color: white;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 5px;         
-    cursor: pointer;           
+
+    background-color: rgb(65, 7, 123);
+    color: white;             
+    border: none;               
+    padding: 5px 12px;          
+    border-radius: 5px;       
+    cursor: pointer;          
 }
 
 button:hover {
@@ -102,8 +126,9 @@ button:hover {
     font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
 }
 ul.none {
-  list-style-type: none;     
+  list-style-type: none;   
   font-family: 'Segoe UI Black', 'Arial Black', sans-serif;
+  margin-left:150px;
 }
 
 .header-container { 
@@ -112,8 +137,8 @@ ul.none {
   padding-top: 40px;
   margin-bottom: 50px;
   text-align: center;
-  margin-top: 1px; 
-  margin-bottom: 50px;
+  margin-top: 1px;
+  margin-bottom: 100px;
   margin-left:150px; 
 }
 .header-item:nth-of-type(1){
@@ -133,7 +158,7 @@ ul.none {
   text-align: center;
   background-color: #c79fcc;      
   margin-top: 20px;
-  color: white;               
+  color: white;              
   font-size: 16px;
   cursor: pointer;
   padding-top: 0px;
@@ -141,27 +166,21 @@ ul.none {
 }
 .header-button button {
   background-color: #710080;  
-  font-weight: bold;
-  border: none;              
+  font-weight: bold;          
+  border: none;               
   border-radius: 6px;        
-  padding: 10px 20px;         
-  margin: 5px;
+  padding: 10px 20px;        
+  margin: 5px;                
   cursor: pointer;            
   transition: 0.3s ease;      
 }
 
 .header-button button:hover {
-  background-color: #f189c9;  /* Pink on hover */
+  background-color: #f189c9;  
   color: white;
 }
 
-
-.footer { 
-    
-}
-
 .navbar ul {
-
     list-style-type: none;
     overflow: hidden;
     position: fixed;
@@ -189,8 +208,23 @@ ul.none {
 .navbar ul li a:hover {
   color:#710080   
 }
-
-
+#Immersive { 
+  display: flex;
+  flex-direction: row;
+  
+}
+#Immersive-child:nth-of-type(1){
+  width:100%;
+}
+#Immersive-child:nth-of-type(2){
+  width:100%;
+}
+#Immersive-child:nth-of-type(3){
+  width:100%;
+}
+#rsvp{
+  margin-left:150px;
+}
 
 
 .rsvp-container {
@@ -212,7 +246,6 @@ ul.none {
   padding-right: 10px;
 }
 
-
 .dark-mode {
   background-color: black;
   color: white
@@ -223,21 +256,9 @@ ul.none {
   border-style: solid;
   border-width: 2px;
   border-color: red;
-  background: #ffe6e6; /* soft light red background */
+  background: #ffe6e6; 
 }
 
-
-/* Example: Different dark mode style for h1 */
-.dark-mode h1 {
-    
-}
-
-
-/* Example: Different dark mode style for visited links */
-.dark-mode a:visited * {
-  
-}
-/* Add style to button */
 #theme-button {
   background-color: #710080;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -247,11 +268,49 @@ ul.none {
   
 }
 
+.modal {
+  display: None;   
+  position: fixed; 
+  z-index: 2;    
 
-/* Customize Dark Mode Theme */
-.dark-mode {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 
+  background-color: rgba(0,0,0,0.4); 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
 
+.modal-container {
+
+    padding: 50px;
+    width: 55%;
+    background-color: var(--rsvp-color);
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+    font-family: monospace;
+    display: flex;
+
+}
+
+.article-container { 
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 1px; 
+  margin-bottom: 50px;
+  margin-left:150px; 
+}
+.article-c1:nth-of-type(1){
+  width:100%;
+}
+.article-c1:nth-of-type(2){
+  width:100%;
 }
 
 
@@ -260,6 +319,7 @@ ul.none {
     /* Light Mode */
     --bg-color: #a6a0cf;
     --text-color: #231942;
+    --rsvp-color: #dd3fc5;
 
     /* Dark Mode */
     --bg-color-dark-mode: #3e3377;
